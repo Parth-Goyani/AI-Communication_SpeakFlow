@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import { BarChart3, Briefcase, Mic } from "lucide-react";
@@ -68,11 +69,12 @@ export default function Home() {
             <Button
               variant="ghost"
               className="text-white/80 hover:bg-white/10 hover:text-white"
+              asChild
             >
-              Sign In
+              <Link href="/login">Sign In</Link>
             </Button>
-            <Button className="bg-white text-black hover:bg-white/90">
-              Get Started
+            <Button className="bg-white text-black hover:bg-white/90" asChild>
+              <Link href="/login">Get Started</Link>
             </Button>
           </div>
         </nav>
@@ -103,8 +105,9 @@ export default function Home() {
               <Button
                 size="lg"
                 className="relative bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-[0_0_35px_rgba(99,102,241,0.45)] transition hover:shadow-[0_0_50px_rgba(99,102,241,0.65)]"
+                asChild
               >
-                Start Free Session
+                <Link href="/login">Start Free Session</Link>
               </Button>
               <Button
                 size="lg"
